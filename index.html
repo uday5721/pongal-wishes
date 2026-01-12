@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Happy Pongal</title>
+<style>
+body {
+  text-align: center;
+  background: linear-gradient(#ff9800, #ffc107);
+  font-family: Arial;
+  color: white;
+}
+input {
+  padding: 10px;
+  font-size: 18px;
+}
+button {
+  padding: 10px 20px;
+  font-size: 18px;
+  background: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+#wish {
+  display: none;
+  font-size: 30px;
+  margin-top: 20px;
+}
+.cracker {
+  font-size: 40px;
+  animation: blast 1s infinite;
+}
+@keyframes blast {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.4); }
+  100% { transform: scale(1); }
+}
+</style>
+</head>
+
+<body>
+<h1>🎊 Pongal Wishes 🎊</h1>
+
+<input id="name" placeholder="Enter Your Name"><br><br>
+<button onclick="showWish()">Celebrate 🎉</button>
+
+<div id="wish">
+  <p class="cracker">🧨 🎆 🧨</p>
+  <p id="msg"></p>
+</div>
+
+<script>
+function showWish() {
+  let name = document.getElementById("name").value;
+  document.getElementById("wish").style.display = "block";
+  document.getElementById("msg").innerHTML =
+    "🌾 HAPPY PONGAL 🌾<br>Dear " + name;
+}
+</script>
+
+</body>
+</html>
